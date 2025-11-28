@@ -52,7 +52,7 @@ func SaveGobz(fileName string, data any) {
 	}
 	defer gobFile.Close()
 
-	if err := gobz.EncodeAs(data, gobFile); err != nil {
+	if err := gobz.EncodeAs(gobFile, data); err != nil {
 		log.Fatalf("unable encode gob: %v", err)
 	}
 }

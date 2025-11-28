@@ -56,7 +56,7 @@ func Decode[T any](content []byte) (T, error) {
 	return data, nil
 }
 
-func EncodeAs(data any, writer io.Writer) error {
+func EncodeAs(writer io.Writer, data any) error {
 	const op = "gobgz.EncodeAs"
 	var buf bytes.Buffer
 
